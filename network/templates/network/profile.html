@@ -1,0 +1,22 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% if user.is_authenticated %}
+{% block body %}
+
+
+    <h1>Profile</h1>
+    <div id="app" ></div>
+    
+
+
+    {% endblock %}
+    {% endif %}
+
+    {% block script %}
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script src="{% static 'network/profile.js' %}" type="text/babel"></script>
+    {% endblock %}
